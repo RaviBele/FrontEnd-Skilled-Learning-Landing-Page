@@ -1,0 +1,339 @@
+:root {
+    --primary-color: linear-gradient(#F02AA6, #FF6F48);
+    --secondary-color: #13183F;
+    --para-color: #83869A;
+    --card-get-started-color: #F74780;
+    --content-card-color: #ffffff;
+    --footer-btn-color: linear-gradient(#4851FF, #F02AA6);
+    --main-background-color: #ffffff;
+    --inline-margin: 10rem;
+    --block-margin: 1.5rem;
+    --font: "Plus Jakarta Sans", sans-serif;
+    --heading-font-xl: 56px;
+    --heading-font-l: 40px;
+    --heading-font-m: 32px;
+    --heading-font-s: 24px;
+    --body-font-m: 18px;
+    --body-font-s: 16px;
+    --hover-btn-1-color: #666ca3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font);
+}
+
+article {
+    overflow: hidden;
+}
+
+header {
+    margin: var(--block-margin) var(--inline-margin);
+}
+
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.round-btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 32px;
+    font-size: var(--body-font-m);
+    color: white;
+    z-index: 1;
+}
+
+.primary-background {
+    background: var(--primary-color);
+}
+
+.secondary-background {
+    background-color: var(--secondary-color);
+}
+
+.hero-section {
+    margin: var(--block-margin) var(--inline-margin);
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero-content {
+    margin-block: 12rem 10rem;
+    max-width: 460px;
+}
+
+.hero-content h1 {
+    font-size: var(--heading-font-xl);
+    color: var(--secondary-color);
+    margin-bottom: 2rem;
+}
+
+.hero-content p {
+    font-size: var(--body-font-m);
+    color: var(--para-color);
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+}
+
+
+.hero-image {
+    margin: -200px -450px 0 0;
+}
+
+.content-grid {
+    margin-inline: var(--inline-margin);
+    margin-block: 3rem 6rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+    max-width: 350px;
+    min-height: 350px;
+    margin-inline: 1rem;
+    margin-block: 2rem;
+    border-radius: 10px;
+    padding: 2.5rem;
+    box-shadow: 0px 10px 100px 1px rgba(0, 0, 0, 0.165);
+    position: relative;
+    justify-self: center;
+}
+
+.main {
+    background: linear-gradient(#FF6F48, #F02AA6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: var(--heading-font-m);
+    font-weight: bold;
+}
+
+.icon {
+    position: absolute;
+    left: 32px;
+    top: -24px;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.content h3 {
+    font-size: var(--heading-font-s);
+}
+
+.content p {
+    font-size: var(--body-font-m);
+    line-height: 1.5;
+    color: var(--para-color);
+}
+
+.content a {
+    text-decoration: none;
+    font-weight: bold;
+    color:#F74780;
+    font-size: var(--body-font-m);
+}
+
+footer {
+    background-color: #13183F;
+    padding: 1rem;
+}
+
+.footer {
+    margin: var(--block-margin) var(--inline-margin);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer button {
+    background: var(--footer-btn-color);
+    font-weight: bold;
+}
+
+.round-btn:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 1366px) {
+    .hero-content h1 {
+        font-size: var(--heading-font-l);
+    }
+    .container {
+        max-width: 320px;
+        min-height: 320px;
+    }
+    .content p {
+        font-size: var(--body-font-s);
+    }
+}
+
+
+@media screen and (max-width: 1235px) {
+    :root {
+        --inline-margin: 8rem;
+        --block-margin: 1.5rem;
+    }
+
+    .hero-image {
+        margin: -250px -500px 0 0;
+    }
+
+    .hero-content h1 {
+        font-size: var(--heading-font-l);
+    }
+
+    .hero-content p {
+        font-size: var(--body-font-m);
+    }
+
+    .container {
+        max-width: 320px;
+        min-height: 320px;
+    }
+
+    .main {
+        font-size: var(--heading-font-s);
+    }
+
+    .content p {
+        font-size: var(--body-font-s);
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --inline-margin: 5rem;
+        --block-margin: 1rem;
+    }
+
+    .hero-image img {
+        content: url(assets/image-hero-tablet.webp);
+    }
+
+    .hero-image {
+        margin: -100px -350px 0 0;
+    }
+
+    .hero-content h1 {
+        font-size: var(--heading-font-xl);
+    }
+
+    .hero-content p {
+        font-size: var(--body-font-m);
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .container {
+        max-width: 350px;
+        min-height: 320px;
+    }
+
+    .content p {
+        font-size: var(--body-font-m);
+    }
+}
+
+@media screen and (max-width: 932px) {
+    :root {
+        --inline-margin: 4rem;
+    }
+
+    .hero-image {
+        margin: -100px -300px 0 0;
+    }
+}
+
+@media screen and (max-width: 896px) {
+    :root {
+        --inline-margin: 3.5rem;
+    }
+
+    .hero-image {
+        margin: -150px -350px 0 0;
+    }
+
+    .hero-content h1 {
+        font-size: var(--heading-font-l);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --inline-margin: 2.5rem;
+    }
+
+    .hero-image {
+        margin: -150px -350px 0 0;
+    }
+
+    .hero-content h1 {
+        font-size: var(--heading-font-m);
+    }
+
+    .content h3 {
+        font-size: var(--heading-font-s);
+    }
+
+    .content p {
+        font-size: var(--body-font-s);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --inline-margin: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+    }
+
+    .hero-image img {
+        content: url(assets/image-hero-mobile.webp);
+    }
+
+    .hero-image {
+        margin:-100px 0 0 -20px;
+    }
+
+    .container {
+        max-width: 350px;
+        min-height: 300px;
+        margin-block: 1rem;
+    }
+
+    .main {
+        min-height: 150px;
+    }
+
+    .hero-content {
+        margin-block: 3rem 10rem;
+    }
+
+    .content-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .hero-image {
+        margin:-100px 0 0 -40px;
+    }
+}
